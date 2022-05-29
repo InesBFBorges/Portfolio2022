@@ -7,6 +7,7 @@ const portfolio_text = document.querySelector(".portfolio-text");
 const picture = document.querySelector(".picture");
 const button_container = document.querySelector(".button-container");
 const theme_btn = document.querySelector(".theme-btn");
+const body = document.documentElement.children[1];
 
 let particle_array = [];
 let text_position_y = null;
@@ -17,15 +18,15 @@ let theme_btn_turn = 0;
 const mouse = {
   x: null,
   y: null,
-  radius: canvas.width * 0.05
+  radius: canvas.width * 0.03
 }
 
 theme_btn.addEventListener("click", function(){
-  let outer_div = this.querySelector(".outer");
+	const span = this.querySelector("span");
   if(theme_btn_turn % 2 == 0)
-    this.innerText = "🌑 Dark 🌑";
+    span.innerText = "🌑 Dark 🌑";
   else
-    this.innerText = "☀️ Light ☀️";
+    span.innerText = "☀️ Light ☀️";
   theme_btn_turn++;
 });
 
@@ -41,8 +42,13 @@ window.addEventListener("mousemove", function(event){
 window.addEventListener("resize", function(event){
   canvas.width = event.target.innerWidth;
   canvas.height = event.target.innerHeight;
-  mouse.radius = canvas.width * 0.05;
+  mouse.radius = canvas.width * 0.03;
   image_data_height = canvas.width * 0.2;
+
+	if(window.innerWidth < 500){
+		body.style.paddingTop = "12vh";
+  }
+
 //   portfolio_text.style.top = `${image_data_height}px`;
 //   picture.style.top = `${image_data_height + 20}px`;
 //   button_container.style.top = `${getImageWidth()}px`;
@@ -118,7 +124,12 @@ function drawText(){
   }
   ctx.fillStyle = "white";
   ctx.textAlign = "center";
-  text_position_y = window.innerHeight * 0.15;
+	if(window.innerWidth < 500){
+		text_position_y = 50;
+		body.style.paddingTop = "12vh";
+  }else{
+		text_position_y = window.innerHeight * 0.10;
+  }
   ctx.fillText("Inês Borges", canvas.width / 2, text_position_y, 500);
   textCoordinates = ctx.getImageData(0, 0, canvas.width, image_data_height);
 }

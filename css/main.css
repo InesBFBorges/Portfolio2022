@@ -42,12 +42,16 @@ body{
   min-height: 100vh;
 	display: grid;
 	place-items: center;
+	align-content: center;
+	grid-gap: 1rem;
 }
 
 #canvas{
   background-color: var(--dark-mode-color);
   width: 100%;
   position: fixed;
+	top: 0;
+	left: 0;
   z-index: -1;
   height: 100vh;
 }

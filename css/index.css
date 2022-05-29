@@ -9,12 +9,13 @@
     letter-spacing: 5px;
     text-align: center;
     animation: neon_light 5s linear infinite;
-    -webkit-box-reflect: below -40px linear-gradient(transparent, #0004);
+    -webkit-box-reflect: below -5px linear-gradient(transparent, #0004);
+    margin-bottom: 3rem;
   }
   
   .picture{
-    position: relative;
-    left: calc(50% - var(--image-width) / 2);
+    /* position: static; */
+    /* left: calc(50% - var(--image-width) / 2); */
     width: var(--image-width);
     aspect-ratio: 1;
     object-fit: cover;
@@ -39,6 +40,7 @@
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     box-shadow: var(--box-shadow-btn);
+    text-transform: capitalize;
   }
 
   /* .button-container .theme-btn,
