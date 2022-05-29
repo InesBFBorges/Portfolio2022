@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito-VariableFont_wght.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Red Hat Mono';
+    src: url('../fonts/RedHatMono-VariableFont_wght.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'Red Hat Mono Italic';
+    src: url('../fonts/RedHatMono-Italic-VariableFont_wght.ttf') format('truetype')
+}
