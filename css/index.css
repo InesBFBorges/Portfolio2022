@@ -1,0 +1,310 @@
+.portfolio-text{
+    z-index: 1;
+    position: relative;
+    font-size: clamp(12px, 4vw, 32px);
+    font-weight: bolder;
+    font-family: Nunito;
+    color: var(--dark-mode-color);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+    animation: neon_light 5s linear infinite;
+    -webkit-box-reflect: below -40px linear-gradient(transparent, #0004);
+  }
+  
+  .picture{
+    position: relative;
+    left: calc(50% - var(--image-width) / 2);
+    width: var(--image-width);
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+  
+  /*------- BUTTON CONTAINER --------*/
+  .button-container{
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    perspective: var(--perspective);
+  }
+  
+  .threeD-btn {
+    flex: 1 1 200px;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: var(--box-shadow-btn);
+  }
+
+  /* .button-container .theme-btn,
+  .button-container .project-btn,
+  .button-container .about-me-btn{
+    flex: 1 1 200px;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: var(--box-shadow-btn);
+  }
+  
+  .button-container .contact-me-btn{
+    flex: 1 1 200px;
+    padding: 1.5rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  } */
+  /*------- BUTTON CONTAINER --------*/
+  
+  /*------- THEME BUTTON ----------*/
+  .threeD-btn{
+    position: relative;
+    background-color: var(--primary-clr-10);
+    color: var(--primary-clr-90);
+    perspective: var(--perspective);
+    box-shadow: var(--box-shadow-btn);
+    border-radius: var(--btn-br);
+  }
+  
+  .cover, .cover > * {
+    --time: 1000ms;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--transition);
+  }
+  
+  .cover{
+    transform-origin: center bottom;
+    transform-style: preserve-3d;
+  }
+  
+  .inner,
+  .outer {
+    border-radius: var(--btn-br);
+  }
+  
+  .inner{
+    background-color: var(--primary-clr-90);
+  }
+  
+  .outer{
+    background-color: var(--primary-clr-70);
+    transform: translateZ(0.25rem);
+    display: grid;
+    place-items: center;
+  }
+  
+  .edge{
+    background-color: var(--primary-clr-70);
+    top: 0.25rem;
+    height: 0.25rem;
+    transform: rotateX(90deg);
+    transform-origin: center top;
+  }
+  
+  .threeD-btn:hover .cover{
+    transform: rotateX(-120deg);
+  }
+  /*------- THEME BUTTON ----------*/
+  
+  /*-------- PROJECT BUTTON ----------*/
+  /* .project-btn {
+    position: relative;
+    background-color: var(--btn-clr-10);
+    color: var(--btn-clr-90);
+    transform-style: preserve-3d;
+    animation: button2 7s linear infinite;
+  }
+  
+  .project-btn:active{
+    box-shadow: inset 5px 5px 10px 0 var(--neon-shadow-color),
+                inset -5px -5px 10px 0 var(--neon-shadow-color);
+  }
+  
+  .project-btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 0px;
+    height: 100%;
+    background-color: var(--btn-clr-5);
+    animation: button2_before 7s linear infinite;
+  }
+  
+  .project-btn::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0px;
+    height: 100%;
+    background-color: var(--btn-clr-5);
+    animation: button2_after 7s linear infinite;
+  } */
+  /*-------- PROJECT BUTTON ----------*/
+  
+  /*-------- ABOUT ME BUTTON -----------*/
+/*   
+  .about-me-btn {
+    --time: 750ms;
+    height: 3rem;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all var(--time) ease;
+    transform: translateZ(-1.5rem);
+  }
+  
+  .about-me-btn:hover {
+    transform: rotateX(-90deg) translateY(1.5rem);
+  }
+  
+  .default-side,
+  .hover-side {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    backface-visibility: hidden;
+  }
+  
+  .default-side {
+    background-color: var(--btn-clr-60);
+    transform: translateZ(1.5rem);
+  }
+  
+  .hover-side {
+    Background-color: var(--btn-clr-10);
+    color: var(--btn-clr-90);
+    transform: rotateX(90deg) translateZ(1.5rem);
+  } */
+  
+  /*-------- ABOUT ME BUTTON -----------*/
+  
+  /*-------- CONTACT ME BUTTON ----------*/
+  /* .contact-me-btn{
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate_button4 8s linear infinite;
+    background-color: transparent;
+    box-shadow: 0 0 0 0 transparent;
+    perspective: var(--perspective);
+  }
+  
+  .contact-me-btn span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--a-text-color);
+    border: 1px dashed var(--btn-clr-10);
+  }
+  
+  .contact-me-btn span:nth-child(1){
+    transform: rotateX(360deg) translateZ(25px);
+  }
+  .contact-me-btn span:nth-child(2){
+    transform: rotateX(270deg) translateZ(25px);
+  }
+  .contact-me-btn span:nth-child(3){
+    transform: rotateX(180deg) translateZ(25px);
+  }
+  .contact-me-btn span:nth-child(4){
+    transform: rotateX(90deg) translateZ(25px);
+  } */
+  /*-------- CONTACT ME BUTTON ----------*/
+  
+  
+  
+  /*--------- KEYFRAMES ----------*/
+  /* @keyframes button2_before{
+    0%{
+      
+    }
+    33%{
+      width: 20px;
+      right: 100%;
+    }
+    48%{
+      right: 100%;
+    }
+    49%{
+      width: 0px;
+    }
+    100%{
+      
+    }
+  }
+  
+  @keyframes button2_after{
+    0%{
+      
+    }
+    49%{
+      width: 0px;
+    }
+    66%{
+      width: 20px;
+    }
+    82%{
+      width: 0px;
+    }
+    100%{
+      
+    }
+  }
+  
+  @keyframes button2{
+    0%{
+      
+    }
+    33%{
+      transform: rotateY(30deg);
+    }
+    49%{
+      transform: rotateY(0);
+    }
+    66%{
+      transform: rotateY(-30deg);
+    }
+    100%{
+      
+    }
+  } */
+  
+  @keyframes neon_light{
+    0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92%{
+      color: var(--neon-text-color);
+      text-shadow: none;
+    }
+    18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100%{
+      color: var(--neon-color);
+      text-shadow: 0 0 10px var(--neon-shadow-color),
+        0 0 20px var(--neon-shadow-color),
+        0 0 40px var(--neon-shadow-color),
+        0 0 80px var(--neon-shadow-color),
+        0 0 100px var(--neon-shadow-color),
+        0 0 120px var(--neon-shadow-color);
+    }
+  }
+  
+  /* @keyframes rotate_button4{
+    to{
+      transform: perspective(var(--perspective)) rotateX(360deg);
+    }
+  } */
