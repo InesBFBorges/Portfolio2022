@@ -1,13 +1,39 @@
 @import "./fonts.css";
+@import "./index.css";
 
 *, 
 *::after, 
 *::before {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 :root {
-    
+	--primary-clr-10: hsl(230 100% 10%);
+	--primary-clr-20: hsl(230 100% 20%);
+	--primary-clr-30: hsl(230 100% 30%);
+	--primary-clr-40: hsl(230 100% 40%);
+	--primary-clr-50: hsl(230 100% 50%);
+	--primary-clr-60: hsl(230 100% 60%);
+	--primary-clr-70: hsl(230 100% 70%);
+	--primary-clr-80: hsl(230 100% 80%);
+	--primary-clr-90: hsl(230 100% 90%);
+	--primary-clr-100: hsl(230 100% 100%);
+	--dark-mode-color: hsl(0, 0%, 20%);
+	--neon-text-color: hsl(0, 0%, 10%);
+	--neon-color: #fff;
+	--neon-shadow-color: hsl(230 100% 70%);
+	--btn-clr-10: hsl(230 100% 10%);
+	--btn-clr-5: hsl(230 100% 5%);
+	--btn-clr-90: hsl(230 100% 90%);
+	--btn-clr-70: hsl(230 100% 70%);
+	--btn-clr-60: hsl(230 100% 60%);
+	--btn-br: 0.25rem;
+	--a-text-color: hsl(230 100% 90% / 70%);
+	--image-width: clamp(120px, 15vh + 10vw, 300px);
+	--font-size: 1rem;
+	--box-shadow-btn: 0 3px 5px 1px rgba(0,0,0,0.5);
+	--transition: all var(--time, 300ms) ease;
+	--perspective: 45rem;
 }
