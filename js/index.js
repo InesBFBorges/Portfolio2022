@@ -45,7 +45,7 @@ window.addEventListener("resize", function(event){
   mouse.radius = canvas.width * 0.03;
   image_data_height = canvas.width * 0.2;
 
-	if(window.innerWidth < 500){
+	if(window.innerHeight < body.offsetHeight){
 		body.style.paddingTop = "12vh";
   }
 
@@ -124,9 +124,9 @@ function drawText(){
   }
   ctx.fillStyle = "white";
   ctx.textAlign = "center";
-	if(window.innerWidth < 500){
-		text_position_y = 50;
-		body.style.paddingTop = "12vh";
+	if(window.innerWidth < 500 || window.innerHeight < body.offsetHeight){
+		text_position_y = 70;
+		body.style.paddingTop = "15vh";
   }else{
 		text_position_y = window.innerHeight * 0.10;
   }

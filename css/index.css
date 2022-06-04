@@ -1,7 +1,7 @@
 .portfolio-text{
     z-index: 1;
     position: relative;
-    font-size: clamp(12px, 4vw, 32px);
+    font-size: clamp(12px, 4vw, 30px);
     font-weight: bolder;
     font-family: Nunito;
     color: var(--dark-mode-color);
@@ -41,6 +41,11 @@
     -webkit-tap-highlight-color: transparent;
     box-shadow: var(--box-shadow-btn);
     text-transform: capitalize;
+  }
+
+  .threeD-btn,
+  .threeD-btn > * {
+    font-family: "Red Hat Mono";
   }
 
   /* .button-container .theme-btn,

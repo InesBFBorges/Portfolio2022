@@ -44,6 +44,7 @@ body{
 	place-items: center;
 	align-content: center;
 	grid-gap: 1rem;
+	font-family: "Red Hat Mono", monospace;
 }
 
 #canvas{
