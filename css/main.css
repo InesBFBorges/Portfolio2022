@@ -89,6 +89,7 @@ body{
   transform: translate(-50%, -50%);
   border-radius: 50%;
   font-size: var(--font-size);
+	color: var(--primary-clr-20);
 }
 
 .btn:active span {
