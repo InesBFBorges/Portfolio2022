@@ -9,6 +9,8 @@ const button_container = document.querySelector(".button-container");
 const theme_btn = document.querySelector(".theme-btn");
 const body = document.documentElement.children[1];
 
+const aboutBtn = document.querySelector(".about-btn");
+
 let particle_array = [];
 let text_position_y = null;
 let image_data_height = canvas.width * 0.2;
@@ -20,6 +22,10 @@ const mouse = {
   y: null,
   radius: canvas.width * 0.03
 }
+
+aboutBtn.addEventListener("click", function(){
+  window.location = "./about.html";
+});
 
 theme_btn.addEventListener("click", function(){
 	const span = this.querySelector("span");

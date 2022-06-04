@@ -1,5 +1,6 @@
 @import "./fonts.css";
 @import "./index.css";
+@import "./about.css";
 
 *, 
 *::after, 
@@ -30,6 +31,8 @@
 	--btn-clr-70: hsl(230 100% 70%);
 	--btn-clr-60: hsl(230 100% 60%);
 	--btn-br: 0.25rem;
+	--btn-size: 5rem;
+	--btn-padding: 0.5rem;
 	--a-text-color: hsl(230 100% 90% / 70%);
 	--image-width: clamp(120px, 15vh + 10vw, 300px);
 	--font-size: 1rem;
@@ -55,4 +58,40 @@ body{
 	left: 0;
   z-index: -1;
   height: 100vh;
+}
+
+.btn {
+  position: relative;
+  width: var(--btn-size);
+  height: var(--btn-size);
+  padding: var(--btn-padding);
+  border-radius: 50%;
+  background-image: linear-gradient(0deg, var(--primary-clr-70), var(--primary-clr-90));
+  border: 2px solid var(--primary-clr-20);
+  box-shadow: 0 1rem 20px var(--primary-clr-10);
+  transition: box-shadow 0.3s linear;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 0 5px 10px var(--primary-clr-10);
+}
+
+.btn span{
+  display: grid;
+  place-items: center;
+  position: relative;
+  background-image: linear-gradient(0deg, var(--primary-clr-90), var(--primary-clr-70));
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  font-size: var(--font-size);
+}
+
+.btn:active span {
+  background-image: linear-gradient(0deg, var(--primary-clr-90), var(--primary-clr-60));
+	-webkit-tap-highlight-color: transparent;
 }
