@@ -49,3 +49,30 @@ body{
 	letter-spacing: 1px;
 }
 
+#arrow-left {
+	width: 70%;
+	fill: var(--primary-clr-20);
+}
+
+.vary-weight {
+	animation: animate-weight 3s linear infinite alternate;
+}
+
+.hufflepuff-text {
+	font-family: "Harry Potter", monospace;
+	font-size: 1.5rem;
+}
+
+.hufflepuff-color {
+	color: var(--hufflepuff-yellow);
+}
+
+
+@keyframes animate-weight{
+	0% {
+		font-variation-settings: "wght" 300;
+	}
+	100%{
+		font-variation-settings: "wght" 700;
+	}
+}

@@ -52,7 +52,7 @@ window.addEventListener("resize", function(event){
   image_data_height = canvas.width * 0.2;
 
 	if(window.innerHeight < body.offsetHeight){
-		body.style.paddingTop = "12vh";
+		body.style.paddingTop = "25vh";
   }
 
 //   portfolio_text.style.top = `${image_data_height}px`;
@@ -131,8 +131,8 @@ function drawText(){
   ctx.fillStyle = "white";
   ctx.textAlign = "center";
 	if(window.innerWidth < 500 || window.innerHeight < body.offsetHeight){
-		text_position_y = 70;
-		body.style.paddingTop = "15vh";
+		text_position_y = 100;
+		body.style.paddingTop = "25vh";
   }else{
 		text_position_y = window.innerHeight * 0.10;
   }

@@ -39,6 +39,8 @@
 	--box-shadow-btn: 0 3px 5px 1px rgba(0,0,0,0.5);
 	--transition: all var(--time, 300ms) ease;
 	--perspective: 45rem;
+	--hufflepuff-yellow: #ecb939;
+	--hufflepuff-black: #000;
 }
 
 body{
@@ -90,6 +92,9 @@ body{
   border-radius: 50%;
   font-size: var(--font-size);
 	color: var(--primary-clr-20);
+	font-family: "Nunito", monospace;
+	font-weight: 900;
+	letter-spacing: 1px;
 }
 
 .btn:active span {

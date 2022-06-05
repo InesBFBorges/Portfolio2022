@@ -12,3 +12,8 @@
     font-family: 'Red Hat Mono Italic';
     src: url('../fonts/RedHatMono-Italic-VariableFont_wght.ttf') format('truetype')
 }
+
+@font-face {
+    font-family: 'Harry Potter';
+    src: url('../fonts/HARRYP__.TTF') format('truetype')
+}
