@@ -1,6 +1,7 @@
 @import "./fonts.css";
 @import "./index.css";
 @import "./about.css";
+@import "./contact.css";
 
 *, 
 *::after, 
@@ -50,16 +51,17 @@ body{
 	align-content: center;
 	grid-gap: 1rem;
 	font-family: "Red Hat Mono", monospace;
+	background-color: transparent;
 }
 
 #canvas{
   background-color: var(--dark-mode-color);
   width: 100%;
   position: fixed;
-	top: 0;
-	left: 0;
+  top: 0;
+  left: 0;
   z-index: -1;
-  height: 100vh;
+  height: 100%;
 }
 
 .btn {
@@ -73,6 +75,18 @@ body{
   box-shadow: 0 1rem 20px var(--primary-clr-10);
   transition: box-shadow 0.3s linear;
   cursor: pointer;
+}
+
+.btn-social-media img {
+	transition: var(--transition);
+	width: 5rem;
+	max-width: 5rem; 
+	filter: drop-shadow(0 2px 3px rgba(0,0,0,0.6));
+}
+
+.btn-social-media:hover img {
+	transform: translateY(-20px);
+	cursor: pointer;
 }
 
 .btn:hover {

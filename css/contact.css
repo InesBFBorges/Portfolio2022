@@ -1,0 +1,109 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: min(600px, 100%);
+    padding: 0.8rem;
+  }
+  /*
+  .input-container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  
+  .input-container input {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .input-container input:focus ~ label{
+    background-color: var(--neutral-clr-20);
+    padding: 0.20rem 0.5rem;
+    border-radius: 500px;
+    transform: translateY(calc(-100% + 0.4rem));
+  }
+  
+  .input-container label {
+    position: absolute;
+    justify-self: start;
+    font-size: 1.2rem;
+    color: var(--primary-clr-90);
+    transition: all 300ms linear;
+    margin-left: 1rem;
+  }
+  */
+
+  .social-media-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #input-name,
+  #input-email {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  .input-text {
+    padding: 1rem;
+    background-color: transparent;
+    border: 1px solid var(--primary-clr-90);
+    border-radius: 10px;
+    color: var(--primary-clr-90);
+  }
+
+  .contact-btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #submit-btn {
+    position: relative;
+    /* align-self: flex-end; */
+    padding: 1rem 3rem;
+    background-color: transparent;
+    color: var(--primary-clr-90);
+    border: 1px solid var(--primary-clr-90);
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  #submit-btn::before,
+  #submit-btn::after {
+    content: '';
+    padding: 0.5rem;
+    position: absolute;
+    border: 1px solid var(--primary-clr-50);
+    border-radius: 50%;
+    background-color: var(--dark-mode-color);
+    transition: all 300ms ease;
+    box-shadow: 0 0 10px 0 var(--primary-clr-90),
+      0 0 20px 0 var(--primary-clr-90);
+  }
+  
+  #submit-btn::before {
+    top: 0;
+    left: 1rem;
+    transform: translateY(-50%);
+  }
+  
+  #submit-btn::after {
+    bottom: 0;
+    right: 1rem;
+    transform: translateY(50%);
+  }
+  
+  #submit-btn:hover::before {
+    left: calc(100% - 2rem);
+  }
+  
+  #submit-btn:hover::after {
+    right: calc(100% - 2rem);
+  }

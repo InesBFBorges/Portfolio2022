@@ -10,6 +10,7 @@ const theme_btn = document.querySelector(".theme-btn");
 const body = document.documentElement.children[1];
 
 const aboutBtn = document.querySelector(".about-btn");
+const contactBtn = document.querySelector(".contact-btn");
 
 let particle_array = [];
 let text_position_y = null;
@@ -25,6 +26,10 @@ const mouse = {
 
 aboutBtn.addEventListener("click", function(){
   window.location = "./about.html";
+});
+
+contactBtn.addEventListener("click", function(){
+  window.location = "./contact.html";
 });
 
 theme_btn.addEventListener("click", function(){
@@ -123,7 +128,7 @@ class Particle {
 }
 
 function drawText(){
-  if(window.innerWidth * 0.8 < 16){
+  if(window.innerWidth * 0.08 < 30){
     ctx.font = "16px Verdana";
   }else{
     ctx.font = "8vw Verdana";
@@ -131,10 +136,10 @@ function drawText(){
   ctx.fillStyle = "white";
   ctx.textAlign = "center";
 	if(window.innerWidth < 500 || window.innerHeight < body.offsetHeight){
-		text_position_y = 100;
-		body.style.paddingTop = "25vh";
+		text_position_y = 50;
+		body.style.paddingTop = "10vh";
   }else{
-		text_position_y = window.innerHeight * 0.10;
+		text_position_y = window.innerHeight * 0.15;
   }
   ctx.fillText("Inês Borges", canvas.width / 2, text_position_y, 500);
   textCoordinates = ctx.getImageData(0, 0, canvas.width, image_data_height);
