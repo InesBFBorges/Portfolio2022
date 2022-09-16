@@ -1,0 +1,96 @@
+  
+.main{
+  width: min(100%, 600px);
+  z-index: 10;
+}
+
+.project-container{
+  width: 100%;
+  padding: 1rem;
+  background-color: hsl(0 0% 10% / 0.8);
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 1rem;
+  border-radius: var(--btn-br);
+  box-shadow: 0 0 10px 3px rgba(0,0,0,0.6);
+}
+
+.project-image {
+  width: 150px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  grid-row: 1 / 3;
+  border-radius: var(--btn-br);
+  cursor: pointer;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,0.6);
+  transition: var(--transition);
+}
+
+.project-image:hover {
+  transform: scale(1.5);
+}
+
+.project-title {
+  text-align: center;
+  color: var(--primary-clr-90);
+  font-size: 1.3rem;
+}
+
+.technology-container{
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 100%));
+  grid-gap: 0.5rem;
+  justify-content: start;
+  align-items: center;
+}
+
+.tech {
+  padding: 0.4rem 0.7rem;
+  border-radius: 500px;
+  /* background-color: limegreen; */
+  font-size: 14px;
+}
+
+.tech:has(.react) {
+  background-color: var(--react-bck-clr);
+}
+.tech:has(.pwa) {
+  background-color: var(--pwa-bck-clr);
+}
+
+.tech-img {
+  vertical-align: middle;
+  width: 24px;
+}
+
+.tech-text {
+  text-transform: uppercase;
+}
+
+.tech-text.react {
+  color: var(--react-clr);
+}
+.tech-text.pwa {
+  color: var(--pwa-clr);
+}
+
+.more-btn,
+.less-btn{
+  grid-column: 1 / 3;
+  padding: 0.5rem 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--primary-clr-90);
+}
+
+.less-btn {
+  display: none;
+}
+
+.project-description {
+  grid-column: 1 / 3;
+  display: none;
+  color: var(--primary-clr-90);
+}

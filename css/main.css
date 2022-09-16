@@ -2,6 +2,7 @@
 @import "./index.css";
 @import "./about.css";
 @import "./contact.css";
+@import "./projects.css";
 
 *, 
 *::after, 
@@ -42,6 +43,10 @@
 	--perspective: 45rem;
 	--hufflepuff-yellow: #ecb939;
 	--hufflepuff-black: #000;
+	--react-clr: #61dafb;
+	--react-bck-clr: #282c34;
+	--pwa-clr: #6600ED;
+	--pwa-bck-clr: #aaa;
 }
 
 body{

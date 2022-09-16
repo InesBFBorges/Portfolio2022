@@ -11,6 +11,7 @@ const body = document.documentElement.children[1];
 
 const aboutBtn = document.querySelector(".about-btn");
 const contactBtn = document.querySelector(".contact-btn");
+const projectsBtn = document.querySelector(".projects-btn");
 
 let particle_array = [];
 let text_position_y = null;
@@ -30,6 +31,10 @@ aboutBtn.addEventListener("click", function(){
 
 contactBtn.addEventListener("click", function(){
   window.location = "./contact.html";
+});
+
+projectsBtn.addEventListener("click", function(){
+  window.location = "./projects.html";
 });
 
 theme_btn.addEventListener("click", function(){
